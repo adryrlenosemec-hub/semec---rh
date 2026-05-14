@@ -493,10 +493,17 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     <select id="F-FREQ-UNI" onchange="loadFreq()" style="flex:1">
       <option value="">Todas as unidades</option>
       <option>EMEF Mário Covas</option>
-      <option>EMEF Alcyr Meira</option>
+      <option>EMEF Prof. Alcyr Meira</option>
       <option>UMEI Icoaraci</option>
       <option>EMEF Antônio Lemos</option>
-      <option>SEDUC</option>
+      <option>EMEF Dr. Freitas</option>
+      <option>UMEI Bengui</option>
+      <option>EMEF Batista Campos</option>
+      <option>EMEF Magalhães Barata</option>
+      <option>EMEF José Veríssimo</option>
+      <option>EMEF Padre Bruno Sechi</option>
+      <option>EMEF Mário Barbosa</option>
+      <option>SEDUC / SERH</option>
     </select>
   </div>
   <div class="kgrid">
@@ -644,11 +651,21 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
     </div>
     <div class="form-row"><label>Unidade de Lotação</label>
       <select id="SRV-UNI">
-        <option>EMEF Mário Covas</option><option>EMEF Alcyr Meira</option>
-        <option>UMEI Icoaraci</option><option>EMEF Antônio Lemos</option>
-        <option>EMEF Dr. Freitas</option><option>UMEI Bengui</option>
-        <option>EMEF Batista Campos</option><option>EMEF Magalhães Barata</option>
-        <option>SEDUC</option>
+        <option>EMEF Mário Covas</option>
+        <option>EMEF Prof. Alcyr Meira</option>
+        <option>UMEI Icoaraci</option>
+        <option>EMEF Antônio Lemos</option>
+        <option>EMEF Dr. Freitas</option>
+        <option>UMEI Bengui</option>
+        <option>EMEF Batista Campos</option>
+        <option>EMEF Magalhães Barata</option>
+        <option>EMEF José Veríssimo</option>
+        <option>EMEF Padre Bruno Sechi</option>
+        <option>EMEF Mário Barbosa</option>
+        <option>EMEF Justo Chermont</option>
+        <option>UMEI Terra Firme</option>
+        <option>UMEI Sacramenta</option>
+        <option>SEDUC / SERH</option>
       </select>
     </div>
     <div class="form-grid">
@@ -1246,23 +1263,49 @@ function statusBadge(s){
 /* ═══ GUIA RH — 12 MÓDULOS ══════════════════════════════════════ */
 const GUIA=[
   {num:1,label:'Estrutura',content:`
-    <div class="g-card"><h3>Organograma do RH</h3>
-    <div style="text-align:center;padding:8px 0">
+    <div class="g-card"><h3>Organograma oficial da SEMEC — SERH</h3>
+    <div style="text-align:center;padding:8px 0;overflow-x:auto">
       <div style="background:var(--blue);color:#fff;padding:7px 16px;border-radius:7px;display:inline-block;font-size:12px;font-weight:600;margin-bottom:6px">Secretário(a) Municipal de Educação</div>
       <div style="color:var(--t4);font-size:16px;margin:2px 0">|</div>
-      <div style="background:var(--bluedim);border:1px solid rgba(37,132,216,.25);color:var(--blue2);padding:7px 16px;border-radius:7px;display:inline-block;font-size:12px;font-weight:600;margin-bottom:6px">Coordenação Geral de Gestão de Pessoas (RH)</div>
+      <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t2);padding:5px 10px;border-radius:6px;font-size:10px">Sec. Exec. Pedagógica</div>
+        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t2);padding:5px 10px;border-radius:6px;font-size:10px">Sec. Exec. de Finanças</div>
+        <div style="background:var(--blue);color:#fff;padding:5px 10px;border-radius:6px;font-size:10px;font-weight:600">SERH — Sec. Exec. de RH</div>
+        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t2);padding:5px 10px;border-radius:6px;font-size:10px">Sec. Exec. de Serviços</div>
+      </div>
       <div style="color:var(--t4);font-size:16px;margin:2px 0">|</div>
-      <div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap">
-        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:6px 12px;border-radius:6px;font-size:11px">Setor de Frequência</div>
-        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:6px 12px;border-radius:6px;font-size:11px">Setor de Folha</div>
-        <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:6px 12px;border-radius:6px;font-size:11px">Vida Funcional</div>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:6px">
+        <div style="border:1px solid rgba(37,132,216,.3);border-radius:8px;padding:8px 12px;background:var(--bluedim)">
+          <div style="color:var(--blue2);font-size:11px;font-weight:600;margin-bottom:6px">Diretoria de Folha de Pagamento</div>
+          <div style="display:flex;gap:6px;justify-content:center">
+            <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:4px 8px;border-radius:5px;font-size:10px">Folha de Pagamento</div>
+            <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:4px 8px;border-radius:5px;font-size:10px">Vida Funcional</div>
+          </div>
+        </div>
+        <div style="border:1px solid rgba(31,184,110,.25);border-radius:8px;padding:8px 12px;background:var(--grndim)">
+          <div style="color:#4be09a;font-size:11px;font-weight:600;margin-bottom:6px">Diretoria de Lotação</div>
+          <div style="display:flex;gap:6px;justify-content:center">
+            <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:4px 8px;border-radius:5px;font-size:10px">Lotação</div>
+            <div style="background:var(--bg3);border:1px solid var(--b1);color:var(--t1);padding:4px 8px;border-radius:5px;font-size:10px">Terceirizados e Estagiários</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <div style="background:var(--amddim);border:1px solid rgba(232,163,32,.2);color:#f2c040;padding:4px 10px;border-radius:5px;font-size:10px">Assessoria Jurídica</div>
+        <div style="background:var(--amddim);border:1px solid rgba(232,163,32,.2);color:#f2c040;padding:4px 10px;border-radius:5px;font-size:10px">Núcleo de Controle Interno</div>
+        <div style="background:var(--amddim);border:1px solid rgba(232,163,32,.2);color:#f2c040;padding:4px 10px;border-radius:5px;font-size:10px">Protocolo Geral</div>
       </div>
     </div></div>
-    <div class="g-card"><h3>Funções de cada setor</h3><ul>
-    <li><strong>Coordenação Geral:</strong> supervisiona, assina documentos, responde por decisões administrativas.</li>
-    <li><strong>Frequência:</strong> controla ponto, faltas, atestados. Recebe informações das escolas mensalmente.</li>
-    <li><strong>Folha de Pagamento:</strong> processa salários, descontos, vantagens, rubricas. Envia ao financeiro.</li>
-    <li><strong>Vida Funcional:</strong> cuida da trajetória do servidor: posse, lotação, progressão, férias, licenças, exoneração.</li>
+    <div class="g-card"><h3>Funções de cada setor da SERH</h3><ul>
+    <li><strong>SERH (Secretaria Executiva de RH):</strong> coordena toda a gestão de pessoas da SEMEC. Responde diretamente ao Secretário Municipal de Educação.</li>
+    <li><strong>Diretoria de Folha de Pagamento:</strong> responsável pelo processamento da folha mensal, rubricas, descontos e envio ao financeiro.</li>
+    <li><strong>Vida Funcional:</strong> cuida da trajetória do servidor — posse, progressão, férias, licenças, exoneração, readaptação e processos disciplinares.</li>
+    <li><strong>Diretoria de Lotação:</strong> gerencia a distribuição dos servidores pelas unidades escolares e secretaria.</li>
+    <li><strong>Lotação:</strong> designação formal do servidor em cada unidade. Emite e controla portarias de lotação e remoção.</li>
+    <li><strong>Terceirizados e Estagiários:</strong> controla os contratos de pessoal terceirizado e estagiários da rede municipal.</li>
+    <li><strong>Assessoria Jurídica:</strong> orienta a SERH em processos disciplinares, judicializações e interpretação de normas.</li>
+    <li><strong>Núcleo de Controle Interno:</strong> fiscaliza a legalidade dos atos administrativos de pessoal.</li>
+    <li><strong>Protocolo Geral:</strong> registra a entrada e saída de documentos e processos da secretaria.</li>
     </ul></div>
     <div class="g-hl"><strong>Diferença do RH privado:</strong> No setor público, tudo exige concurso, lei ou ato administrativo formal. A legislação limita e protege ao mesmo tempo.</div>`},
   {num:2,label:'Responsab.',content:`
