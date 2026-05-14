@@ -361,9 +361,26 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 
 /* ═══ RESPONSIVE DESKTOP ════════════════════════════════════════ */
 @media(min-width:640px){
-  body{padding-top:var(--HH);padding-bottom:0}
-  #BOTNAV{display:none}
-  #MAIN{max-width:900px;margin:0 auto;padding:20px 24px}
+  body{padding-top:calc(var(--HH) + 48px);padding-bottom:0}
+  #BOTNAV{
+    position:fixed;top:var(--HH);left:0;right:0;bottom:auto;
+    height:48px;z-index:190;
+    background:rgba(13,17,28,.98);
+    border-top:none;border-bottom:1px solid var(--b1);
+    display:flex!important;flex-direction:row;
+    align-items:center;justify-content:flex-start;
+    gap:2px;padding:0 28px;overflow-x:auto;
+  }
+  .bnav-btn{
+    flex-direction:row;gap:7px;
+    height:32px;padding:0 14px;
+    border-radius:6px;font-size:12.5px;
+    flex-shrink:0;
+  }
+  .bnav-btn .ico{font-size:15px}
+  .bnav-btn .lbl{font-size:12.5px}
+  .bnav-btn.A{background:var(--bluedim)}
+  #MAIN{max-width:960px;margin:0 auto;padding:20px 28px}
   .kgrid{grid-template-columns:repeat(3,1fr)}
   .kanban{grid-template-columns:repeat(4,1fr)}
   .guia-nav{grid-template-columns:repeat(6,1fr)}
@@ -744,8 +761,8 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 /* ═══════════════════════════════════════════════════════════════
    CONFIGURAÇÃO — preencha com seus dados do Supabase
    ══════════════════════════════════════════════════════════════ */
-const SUPA_URL  = 'https://cladnkrvhclyzxchcqko.supabase.co';
-const SUPA_KEY  = 'sb_publishable_WuwLQuB_I6zZvKRmtixsJw_oHhfOoO0';
+const SUPA_URL  = 'https://SEU-PROJETO.supabase.co';
+const SUPA_KEY  = 'SUA-ANON-KEY';
 
 /* ═══ INIT SUPABASE ════════════════════════════════════════════ */
 const { createClient } = supabase;
